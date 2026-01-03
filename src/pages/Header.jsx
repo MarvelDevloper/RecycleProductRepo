@@ -15,7 +15,6 @@ export function Header() {
                     UpCycleProduct
                 </h1>
 
-
                 <nav>
                     <ul className="flex gap-6 text-sm sm:text-base">
                         <li>

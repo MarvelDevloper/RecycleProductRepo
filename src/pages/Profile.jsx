@@ -5,9 +5,9 @@ export function Profile() {
   return (
     <div className="min-h-screen bg-gray-50 px-6 md:px-20 py-12">
 
-      {/* Header Section */}
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-        {/* Avatar */}
+      
+
         <div className="shrink-0">
           <img
             src={userAvatar}
@@ -16,7 +16,7 @@ export function Profile() {
           />
         </div>
 
-        {/* User Info */}
+       
         <div className="flex flex-col gap-2 md:gap-4">
           <h1 className="text-3xl md:text-4xl font-extrabold text-green-700">Jane Doe</h1>
           <p className="text-gray-700 text-sm md:text-base">Student / Innovator</p>
@@ -26,7 +26,7 @@ export function Profile() {
         </div>
       </div>
 
-      {/* Stats Section */}
+
       <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div className="bg-green-50 rounded-lg p-6 shadow hover:shadow-lg transition">
           <p className="text-2xl md:text-3xl font-bold text-green-700">12</p>
@@ -46,7 +46,9 @@ export function Profile() {
         </div>
       </div>
 
-      {/* Activity Section */}
+
+ {/* recent activities  */}
+ 
       <div className="mt-12">
         <h2 className="text-2xl font-bold text-green-700 mb-6">Recent Activity</h2>
         <div className="space-y-4">
@@ -75,7 +77,6 @@ export function Profile() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

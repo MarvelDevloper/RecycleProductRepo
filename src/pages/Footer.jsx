@@ -23,7 +23,7 @@ export default function Footer() {
                     </h4>
                     <ul className="space-y-2 text-sm">
                         <li>
-                            <NavLink
+                  <NavLink
                                 to="/"
                                 className={({ isActive }) =>
                                     isActive ? "text-green-400 font-semibold" : "hover:text-green-400"

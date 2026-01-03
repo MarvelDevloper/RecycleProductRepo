@@ -4,14 +4,17 @@ import { Home } from "./pages/Home"
 import { Contact } from "./pages/Contact"
 import { Product } from "./pages/Product"
 import { About } from "./pages/About"
-import { Profile } from "./pages/Profile"
+import { DProfile } from "./pages/DProfile"
 import { AddProduct } from "./pages/AddProduct"
-
+import { fetchClaimproducts, fetchProduct } from "./api/fetchTask"
+import Login from "./pages/Login"
+import Signup from "./pages/Signup"
 export function App(){
 
   const router=createBrowserRouter([{
     path:'/',
     element:<AppLayout/>,
+    // loader:fetchClaimproducts,
     children:[
       {
         path:'/',
@@ -27,15 +30,25 @@ export function App(){
       },
       {
         path:'product',
-        element:<Product/>
+        element:<Product/>,
+        loader:fetchProduct
       },
       {
         path:'profile',
-        element:<Profile/>
+        element:<DProfile/>,
+        loader:fetchClaimproducts
       },
       {
         path:'addproduct',
         element:<AddProduct/>
+      },
+       {
+        path:'/login',
+        element:<Login/>
+      },
+      {
+        path:'signup',
+        element:<Signup/>
       }
     ]
   }])
