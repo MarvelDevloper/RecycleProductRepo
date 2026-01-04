@@ -31,7 +31,7 @@ const userController = {
       await newUser.save()
 
       const token = authToken.generateToken({ id: newUser._id, email: newUser.email,location:newUser.location})
-      res.cookie('token', token, { httpOnly: true, maxAge: 50 * 1000,  sameSite: 'lax' })
+      res.cookie('token', token, { httpOnly: true,  maxAge: 2 * 24 * 60 * 60 * 1000,  sameSite: 'lax' })
       return res.status(201).json({ msg: "User registered successfully!",token:token })
     } catch (error) {
       console.log(error)
@@ -54,7 +54,8 @@ const userController = {
       }
 
       const token = authToken.generateToken({ id: exist._id, email: exist.email,location:"kanjur" })
-      res.cookie('token', token, { httpOnly: true, maxAge: 50 * 1000, sameSite: 'lax' })
+      res.cookie('token', token, { httpOnly: true, maxAge: 2 * 24 * 60 * 60 * 1000,
+        sameSite: 'lax' })
       return res.status(200).json({ msg: "Login successfully" })
     } catch (error) {
       console.log(error)

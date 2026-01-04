@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 
 const authToken = {
     generateToken: (userData) => {
-        return jwt.sign({ userData }, process.env.AUTH_KEY, { expiresIn: "50s" });
+        return jwt.sign({ userData }, process.env.AUTH_KEY, { expiresIn: "2d" });
     },
 
     verifyToken: (req, res, next) => {
