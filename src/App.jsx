@@ -18,7 +18,8 @@ export function App(){
     children:[
       {
         path:'/',
-        element:<Home/>
+        element:<Home/>,
+        loader:fetchClaimproducts
       },
        {
         path:'about',
